@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
+    private static final String TAG = "Login Activity";
     private TextView userpwd;
     private Button btPress;
     @Override
@@ -24,7 +25,10 @@ public class LoginActivity extends AppCompatActivity {
           btPress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("Button Pressed",">>>>");
+                Log.e(TAG,"for login......>>>>");
+                Intent intent = new Intent(LoginActivity.this,NewActivity.class);
+                startActivity(intent);
+
             }
         });
     }
